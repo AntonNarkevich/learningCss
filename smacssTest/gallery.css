@@ -3,7 +3,7 @@
 /*Responsive-ready gallery. Contains items in rows.*/
 /*Items should better be square.*/
 .gallery {
-  padding: 10px;
+  padding: 0 10px 10px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
