@@ -1,0 +1,131 @@
+@import "lib/cssReset.css";
+/*gallery module*/
+/*Responsive-ready gallery. Contains items in rows.*/
+/*Items should better be square.*/
+.gallery {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  zoom: 1;
+}
+.gallery:before,
+.gallery:after {
+  content: "";
+  display: table;
+}
+.gallery:after {
+  clear: both;
+}
+/*Components*/
+.gallery-item-list {
+  margin: 0 -5px;
+}
+.gallery-item {
+  display: inline-block;
+  padding: 10px 5px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 25%;
+  float: left;
+}
+.gallery-item:nth-child(4n + 1) {
+  clear: left;
+}
+/*States*/
+@media (max-width: 1024px) {
+  .is-gallery-responsive .gallery-item {
+    width: 50%;
+    clear: none;
+  }
+  .is-gallery-responsive .gallery-item:nth-child(2n + 1) {
+    clear: left;
+  }
+}
+@media (max-width: 768px) {
+  .is-gallery-responsive .gallery-item {
+    width: 100%;
+    clear: none;
+  }
+}
+/*gallery-3 sub-module*/
+/*Gallery with 3 items in row*/
+.gallery-3 {
+  /*Components*/
+  /*States*/
+}
+.gallery-3 .gallery-item {
+  width: 33.33333333%;
+}
+.gallery-3 .gallery-item:nth-child(n) {
+  clear: none;
+}
+.gallery-3 .gallery-item:nth-child(3n + 1) {
+  clear: left;
+}
+@media (max-width: 768px) {
+  .gallery-3.is-gallery-responsive .gallery-item {
+    width: 100%;
+    clear: none;
+  }
+}
+/*gallery-2 sub-module*/
+/*Gallery with 2 sub-modules in row*/
+.gallery-2 {
+  /*Components*/
+  /*States*/
+}
+.gallery-2 .gallery-item {
+  width: 50%;
+}
+.gallery-2 .gallery-item:nth-child(n) {
+  clear: none;
+}
+.gallery-2 .gallery-item:nth-child(2n + 1) {
+  clear: left;
+}
+@media (max-width: 768px) {
+  .gallery-2.is-gallery-responsive .gallery-item {
+    width: 100%;
+    clear: none;
+  }
+}
+/*gallery-toggle sub-module*/
+/*Gallery with collapse/expand button*/
+.gallery-toggle {
+  /*Components*/
+}
+.gallery-toggle .gallery-item-list {
+  overflow: hidden;
+  max-height: 2000px;
+  -webkit-transition: max-height 0.3s linear 0s;
+  -moz-transition: max-height 0.3s linear 0s;
+  -ms-transition: max-height 0.3s linear 0s;
+  -o-transition: max-height 0.3s linear 0s;
+  transition: max-height 0.3s linear 0s;
+}
+/*Sub-module Components*/
+.gallery-toggle-switch {
+  width: 100%;
+  height: 30px;
+}
+/*Sub-module States*/
+.is-gallery-toggle-collapsed .gallery-item-list {
+  max-height: 0;
+}
+/*gallery-debug sub-module*/
+/*Adds borders to components*/
+.gallery-debug {
+  border: 1px solid black;
+  /*Components*/
+}
+.gallery-debug .gallery-item-list {
+  border: 1px solid green;
+}
+.gallery-debug .gallery-item {
+  border: 1px solid blue;
+}
+.gallery-debug .gallery-toggle-switch {
+  border: 1px solid brown;
+}
